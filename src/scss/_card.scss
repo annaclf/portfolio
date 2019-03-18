@@ -1,0 +1,175 @@
+.card-container{
+  padding: 1rem 1rem 0;
+  perspective: 1000px;
+  .flipper{
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(0deg);
+    height: calc(200px + 1rem);
+  }
+  &.hover{
+    .flipper{
+      transform: rotateY(-180deg);
+    }
+  }
+}
+.card{
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  display: grid;
+  height: 200px;
+  max-width: 100%;
+  width: 100%;
+  a{
+    color: $white;
+  }
+  h2, p{
+    margin: 0;
+  }
+  h2{
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+  &.front, &.back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &.front{
+    z-index: 2;
+    transform: rotateY(0deg);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    .first {
+      background-color: $dark-red;
+      grid-column: 8 / span 5;
+      grid-row: 1 / span 4;
+    }
+    .second {
+      background-color: $dark-red;
+      grid-column: 1 / span 7;
+      grid-row: 1 / span 4;
+    }
+    .third {
+      background-color: $primary-color;
+      -webkit-clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+      clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+      grid-row: 1 / span 3;
+      grid-column: 1 / span 11;
+      position: relative;
+      z-index: 2;
+    }
+    .about-me {
+      background: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      grid-column: 2 / span 10;
+      grid-row: 2 / span 2;
+      justify-content: center;
+      text-align: center;
+      z-index: 3;
+    }
+  }
+  &.back {
+    border: 1px solid $primary-color;
+    transform: rotateY(180deg);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    background:#000;
+    color: #fff;
+    .first {
+      background-color:$orange;
+      grid-column: 1 / span 9;
+      grid-row: 1 / span 3;
+    }
+    .second {
+      background-color: $primary-color;
+      grid-column: 8 / span 5;
+      grid-row: 10 / span 3;
+    }
+    .top.dots {
+      /*
+      background: radial-gradient($primary-color 20%, transparent 19%), radial-gradient($primary-color 20%, transparent 19%), transparent;
+      background-size: 6px 6px;
+      background-position: 0 0, 3px 3px;
+      */
+      grid-column: 8 / span 4;
+      grid-row: 3 / span 3;
+    }
+    .title{
+      grid-row: 3 / span 3;
+      grid-column: 2 / 8;
+      padding-right: 5px;
+      h2{
+        margin-bottom: 0;
+      }
+      p{
+        font-size: .8rem;
+      }
+    }
+    .techs{
+      grid-column: 2 / span 10;
+      grid-row: 9 / span 1;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -5px;
+      span{
+        background: $primary-color;
+        padding: 2px 4px;
+        display: flex;
+        align-items: center;
+        color: $black;
+        margin-bottom: 4px;
+        font-size: 10px;
+        margin-left: 5px;
+      }
+    }
+    .demo{
+      grid-column: 10 / span 2;
+      grid-row: 3 / span 3;
+      a{
+        background: $primary-color;
+        color: $black;
+        display: block;
+      }
+    }
+
+    .bottom.dots {
+      background: radial-gradient($primary-color 20%, transparent 19%), radial-gradient(#000 20%, transparent 19%), transparent;
+      background-size: 6px 6px;
+      background-position: 0 0, 3px 3px;
+      grid-column: 1 / span 7;
+      grid-row: 10 / span 4;
+      z-index: 2;
+    }
+  }
+  /*
+  .dots {
+    background: radial-gradient($primary-color 20%, transparent 19%), radial-gradient(#fa001a 20%, transparent 19%), transparent;
+    background: $primary-color;
+    background-size: 6px 6px;
+    background-position: 0 0, 3px 3px;
+    grid-column: 1 / span 12;
+    grid-row: 3 / span 2;
+    z-index: 1;
+  }
+  */
+  .personal-info{
+    font-size: .8rem;
+    line-height: 1.4;
+  }
+  .personal-info .brand-name{
+    font-weight: 600;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:768px){
+  .card{
+    &.back{
+
+    }
+  }
+}
