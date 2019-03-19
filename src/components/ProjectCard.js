@@ -32,6 +32,9 @@ class Card extends Component {
               <h2>{this.props.name}</h2>
               <p>{this.props.tagline}</p>
             </div>
+            <div className="deadline">
+              <p>Deadline: {this.props.deadline}</p>
+            </div>
             {this.props.techs &&
             <div className="techs">
               {this.props.techs.map(tech => (

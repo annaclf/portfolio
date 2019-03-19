@@ -20,35 +20,36 @@ const Projects = () => {
           name="Iron flip run"
           tagline="A game where you have to avoid obstacles by flipping a runner on a line using any key"
           techs={ironFlip}
-          demo='https://annaclf.github.io/iron-flip-run' />
+          demo='https://annaclf.github.io/iron-flip-run'
+          deadline="7 days" />
         <Project
           module="Module 2"
           title="Local Buddy - Web app"
           >
-          <p>Web app made with express and Handlebars. This project also includes a carefully written README, wireframes, following Trello and Kanban. Deadline: 7 days.</p>
+          <p>Web app made with express and Handlebars. This project also includes a carefully written README, wireframes, following Trello and Kanban.</p>
+          <p>Team: Anna Fredriksson and <a href="https://github.com/hcorta">Hugo Corta</a></p>
         </Project>
-          <ProjectCard
-            name="Local Buddy"
-            tagline="Find friends in the places you visit."
-            techs={localBuddy}
-            demo='https://local-buddy.herokuapp.com/' />
-          <section className="project-description">
-            <div className="container">
-              <h3>Module 3 - final project</h3>
-              <p>My final project at Ironhack was an online text editor for writing markdown notebooks.
-              We used Angular for the frontend and express for the backend.</p>
-              <ul>
-                <li>Team: Anna Fredriksson and <a href="https://github.com/hcorta">Hugo Corta</a></li>
-                <li>Deadline: 10 days</li>
-                <li>Highlights: No css framework.</li>
-              </ul>
-            </div>
-          </section>
-          <ProjectCard
-            name="Mark-box"
-            tagline="Online text editor for writing markdown notebooks."
-            techs={markbox}
-            demo='https://markbox-app.herokuapp.com/' />
+        <ProjectCard
+          name="Local Buddy"
+          tagline="Find friends in the places you visit."
+          techs={localBuddy}
+          demo='https://local-buddy.herokuapp.com/'
+          deadline="7 days" />
+        <Project
+          module="Module 3"
+          title="Mark box - SPA app"
+        >
+          <p>My final project at Ironhack was an online text editor for writing markdown notebooks.
+              We used Angular for the frontend and express for the backend.
+          <br/>Team: Anna Fredriksson and <a href="https://github.com/hcorta">Hugo Corta</a>
+          <br/>Highlights: No css framework.</p>
+        </Project>
+        <ProjectCard
+          name="Mark-box"
+          tagline="Online text editor for writing markdown notebooks."
+          techs={markbox}
+          demo='https://markbox-app.herokuapp.com/'
+          deadline='10 days' />
         </div>
       </>
     );

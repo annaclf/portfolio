@@ -5,10 +5,8 @@ class Project extends Component {
     const {module, title, children} = this.props;
     return (
       <section className="project-description">
-        <div className="container">
           <h3>{module} <span className="h1-desc">{title}</span></h3>
           {children}
-        </div>
       </section>
     );
   }
