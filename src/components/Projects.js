@@ -14,7 +14,7 @@ const Projects = () => {
           module="Module 1"
           title="Eisen flop laufen (Iron flip run)"
           >
-          <p>For this project I used DOM-manupulation and canvas. The idea came from <a href="https://www.youtube.com/watch?v=0iD-B14mX6I" target="_blank">this</a> game. The soundtrack is a 8-bit version of Scweinsteiger by <a href="http://diekatapult.com/" target="_blank">Die Katapult</a>. Demo and description ↓</p>
+          <p>For this project I used DOM-manupulation and canvas. The idea came from <a href="https://www.youtube.com/watch?v=0iD-B14mX6I" target="_blank">this</a> game. The soundtrack is a 8-bit version of Scweinsteiger by <a href="http://diekatapult.com/" target="_blank">Die Katapult</a>.</p>
         </Project>
         <ProjectCard
           name="Iron flip run"
