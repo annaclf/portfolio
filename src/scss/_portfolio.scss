@@ -24,7 +24,7 @@
   }
   .about{
     section{
-      padding: .5rem;
+      padding: 1rem;
     }
   }
   h2.section-title{
@@ -34,8 +34,16 @@
     }
   .project-description{
     padding: 1rem 0;
+    a{
+      text-decoration: underline;
+    }
     h3{
       margin-top: 0;
+      font-size: .8rem;
+      span{
+        display: block;
+        font-size: 1rem;
+      }
     }
     display: flex;
     flex-direction: column;
@@ -44,7 +52,6 @@
   a{
     text-transform: none;
     font-size: inherit;
-    text-decoration: underline;
   }
 }
 

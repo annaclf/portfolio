@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import App from '../App';
 import Nav from './Nav';
+import Cv from './Cv';
 import NotFound from './NotFound';
 
 const Router = () => (

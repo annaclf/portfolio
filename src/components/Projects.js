@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
+import Project from './Project';
 
 const Projects = () => {
     const markbox = ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express.js', 'MongoDB', 'mongoose', 'Angular'];
@@ -9,30 +10,23 @@ const Projects = () => {
       <>
         <h2 className="section-title">Ironhack Projects</h2>
         <div className="projects-container">
-        <section className="project-description">
-            <div className="container">
-              <h3>Module 1 - Code a game</h3>
-              <p>For this project I used DOM-manupulation and canvas.</p>
-              <ul>
-                <li>Team: Anna Fredriksson</li>
-                <li>Deadline: 7 days</li>
-              </ul>
-            </div>
-          </section>
-          <ProjectCard
-            name="Iron flip run"
-            tagline="A game where you have to avoid obstacles flipping a runner on a line."
-            techs={ironFlip}
-            demo='https://annaclf.github.io/iron-flip-run' />
-          <section className="project-description">
-            <div className="container">
-              <h3>Module 2 - web app</h3>
-              <ul>
-                <li>Team: Anna Fredriksson and <a href="https://github.com/hcorta">Hugo Corta</a></li>
-                <li>Deadline: 7 days</li>
-              </ul>
-            </div>
-          </section>
+        <Project
+          module="Module 1"
+          title="Eisen flop laufen (Iron flip run)"
+          >
+          <p>For this project I used DOM-manupulation and canvas. The idea came from <a href="https://www.youtube.com/watch?v=0iD-B14mX6I" target="_blank">this</a> game. The soundtrack is a 8-bit version of Scweinsteiger by <a href="http://diekatapult.com/" target="_blank">Die Katapult</a>. Demo and description ↓</p>
+        </Project>
+        <ProjectCard
+          name="Iron flip run"
+          tagline="A game where you have to avoid obstacles by flipping a runner on a line using any key"
+          techs={ironFlip}
+          demo='https://annaclf.github.io/iron-flip-run' />
+        <Project
+          module="Module 2"
+          title="Local Buddy - Web app"
+          >
+          <p>Web app made with express and Handlebars. This project also includes a carefully written README, wireframes, following Trello and Kanban. Deadline: 7 days.</p>
+        </Project>
           <ProjectCard
             name="Local Buddy"
             tagline="Find friends in the places you visit."

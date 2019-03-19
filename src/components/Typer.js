@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 
 class Typer extends Component {
-  static defaultProps = {
-    heading: '',
-    dataText: []
-  }
+
   state = {
     text: '',
     isDeleting: false,
     loopNum: 0,
     typingSpeed: 200
   }
-
   componentDidMount() {
     this.handleType();
+  }
+  componentWillUnmount() {
+    clearTimeout(this.typeTimeOutId);
+    clearTimeout(this.deleteTimeOutId)
   }
   handleType = () => {
     const { dataText } = this.props;
@@ -27,14 +27,14 @@ class Typer extends Component {
     });
 
     if (!isDeleting && text === fullText) {
-      setTimeout(() => this.setState({ isDeleting: true }), 500);
+      this.deleteTimeOutId = setTimeout(() => this.setState({ isDeleting: true }), 500);
     } else if (isDeleting && text === '') {
       this.setState({
         isDeleting: false,
         loopNum: loopNum + 1
       });
     }
-    setTimeout(this.handleType, typingSpeed);
+    this.typeTimeOutId = setTimeout(this.handleType, typingSpeed);
   }
   render() {
     return (
