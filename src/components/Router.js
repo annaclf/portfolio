@@ -11,7 +11,7 @@ const Router = () => (
         <Nav />
         <Switch>
           <Route exact path="/" component={App} />
-          <Route component={NotFound} />
+          <Route component={App} />
         </Switch>
       </div>
     </BrowserRouter>
